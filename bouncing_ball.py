@@ -63,7 +63,37 @@ ball = Ball(x=100, y=SCREEN_HEIGHT // 2, radius=15, color=RED, dx=5, dy=3) # Add
 
 clock = pygame.time.Clock() # New
 # Game loop
+clock = pygame.time.Clock() # New
+# Game loop
 running = True
+try:
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+        ball.update() # Update ball's position
+
+        # Bouncing logic
+        if ball.x + ball.radius > SCREEN_WIDTH or ball.x - ball.radius < 0:
+            ball.dx *= -1
+        if ball.y + ball.radius > SCREEN_HEIGHT or ball.y - ball.radius < 0:
+            ball.dy *= -1
+
+        screen.fill(WHITE) # Clear screen
+
+        # Draw trees
+        draw_tree(screen, x=60, y=SCREEN_HEIGHT - 150)
+        draw_tree(screen, x=SCREEN_WIDTH - 60, y=SCREEN_HEIGHT - 150)
+
+        ball.draw(screen) # Draw the ball
+
+        pygame.display.flip()  # Update the full display
+        clock.tick(60) # New
+except pygame.error as e:
+    print(f"A Pygame error occurred: {e}")
+finally:
+    pygame.quit()
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
