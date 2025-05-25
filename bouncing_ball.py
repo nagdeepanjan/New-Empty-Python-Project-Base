@@ -32,7 +32,15 @@ class Ball:
     def draw(self, screen):
         pygame.draw.circle(screen, self.color, (int(self.x), int(self.y)), self.radius)
 
-    def update(self):
+def draw(self, screen):
+        pygame.draw.circle(screen, self.color, (int(self.x), int(self.y)), self.radius)
+
+    def update(self, dt):
+        self.x += self.dx * dt
+        self.y += self.dy * dt
+
+# Function to draw a tree
+def draw_tree(screen, x, y):
         self.x += self.dx
         self.y += self.dy
 
