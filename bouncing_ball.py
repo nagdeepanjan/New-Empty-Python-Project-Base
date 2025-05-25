@@ -15,7 +15,6 @@ pygame.display.set_caption("Bouncing Ball")
 
 # Define colors
 WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
 GREEN = (0, 128, 0)  # A darker green for trees
 RED = (255, 0, 0)  # For the ball
 
