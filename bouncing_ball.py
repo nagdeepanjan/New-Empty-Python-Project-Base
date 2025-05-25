@@ -20,6 +20,21 @@ RED = (255, 0, 0)  # For the ball
 
 # Ball class
 class Ball:
+    """
+    Represents a bouncing ball in the game.
+
+    Attributes:
+        x (float): The x-coordinate of the ball's center.
+        y (float): The y-coordinate of the ball's center.
+        radius (int): The radius of the ball.
+        color (tuple): The color of the ball in RGB format.
+        dx (float): The horizontal velocity of the ball.
+        dy (float): The vertical velocity of the ball.
+
+    Methods:
+        draw(screen): Draws the ball on the given Pygame screen.
+        update(): Updates the ball's position based on its velocity.
+    """
     def __init__(self, x, y, radius, color, dx, dy):
         self.x = x
         self.y = y
