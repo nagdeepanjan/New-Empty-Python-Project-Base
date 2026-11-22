@@ -1,4 +1,22 @@
-# [New Empty Python Project Base](https://github.com/Neuraxio/New-Empty-Python-Project-Base)
+# Hello World
+
+A small Python app that prints a greeting.
+
+Run it from the repository root:
+
+```sh
+python -m project.hello_world
+```
+
+The command prints `Hello World!`.
+
+## Tests
+
+Run the test suite with `pytest`.
+
+---
+
+## Original template notes
 
 > This is just what you need to start a new Python project.
 

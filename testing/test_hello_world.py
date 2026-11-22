@@ -18,3 +18,9 @@ def test_example(argument_values):
 def test_hello_world(): 
     assert hello_world() == "Hello World!"
 
+def test_main(capsys):
+    from project.hello_world import main
+
+    main()
+    assert capsys.readouterr().out == "Hello World!\n"
+

@@ -10,3 +10,11 @@ License: CC0-1.0 (Public Domain)
 def hello_world():
     return "Hello World!"
 
+
+def main():
+    print(hello_world())
+
+
+if __name__ == "__main__":
+    main()
+
