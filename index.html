@@ -54,6 +54,16 @@
 
     main { padding: 2rem; text-align: center; }
 
+    footer {
+      position: fixed;
+      bottom: 1rem;
+      color: #e2ddff;
+      font-size: .75rem;
+      opacity: .75;
+    }
+
+    footer a { color: inherit; }
+
     h1 {
       margin: 0;
       font-size: clamp(3.5rem, 12vw, 9rem);
@@ -95,6 +105,7 @@
     <h1>Hello World!</h1>
     <p>A little color for your day</p>
   </main>
+  <footer><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a></footer>
   <script>
     const canvas = document.querySelector("canvas");
     const context = canvas.getContext("2d");
